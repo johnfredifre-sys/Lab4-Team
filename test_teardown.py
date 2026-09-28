@@ -2,19 +2,17 @@ import pytest
 
 
 @pytest.fixture
-def setup_and_teardown():
-    print("\n[setup]")
-
+def resource():
+    print("[setup]")
     yield
-
     print("[teardown]")
 
 
-def test_first(setup_and_teardown):
-    print("Running first test")
-    assert True
+def test_first(resource):
+    print("running test_first")
+    assert 1 + 1 == 2
 
 
-def test_second(setup_and_teardown):
-    print("Running second test")
-    assert True
+def test_second(resource):
+    print("running test_second")
+    assert "abc".upper() == "ABC"
