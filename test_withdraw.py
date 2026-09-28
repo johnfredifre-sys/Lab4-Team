@@ -11,3 +11,8 @@ def test_withdraw_reduces_balance(account):
     result = account.withdraw(40)
     assert result == 60
     assert account.balance == 60
+
+def test_overdraft_raises_value_error(account):
+    with pytest.raises(ValueError, match="Insufficient funds"):
+        account.withdraw(150)
+    assert account.balance == 100
