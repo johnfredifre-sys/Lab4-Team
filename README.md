@@ -39,3 +39,4 @@ Arnt Htoo Lwin made an earlier commit but later left the group. The two author n
 3. **What is the difference between committing and pushing?** Committing saves changes in my local repository. Pushing uploads those commits to GitHub for my teammates to see.
 
 4. **How do fixtures reduce duplicated setup code in tests?** A fixture prepares the account for each test, so we do not have to repeat the same setup code in every test.
+
